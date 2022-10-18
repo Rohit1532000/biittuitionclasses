@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <head>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            /* top */
+            .head {
+                font-size: 11px;
+            }
+
+            .heads {
+                font-size: 11px;
+
+            }
+
+            .button {
+
+                background-color: rgb(212, 217, 221);
+                height: 25px;
+                width: 25px;
+                text-align: center;
+                border: none;
+                border-radius: 5px;
+                font-size: 13px;
+                transition: 0.4s;
+                cursor: pointer;
+            }
+
+            .button:hover {
+                background-color: rgb(51, 51, 189);
+                color: white;
+            }
+
+            #headimg {
+                background-image: url("titleimage.jpg");
+                width: 100%;
+                height: 250px;
+            }
+
+            #title {
+                color: white;
+                text-align: center;
+                line-height: 270px;
+                font-weight: bold;
+                font-size: 45px;
+                text-shadow: 3px 3px 3px black;
+            }
+
+            /* navbar */
+            .navbar {
+                margin-top: 24px;
+            }
+
+            .navbar li {
+                transition: 0.5s;
+            }
+
+            .navbar li:hover {
+                background-color: black;
+                border-radius: 5px;
+            }
+
+            @media screen and (max-width:600px) {
+                .navbar {
+                    margin-top: 73px;
+                }
+            }
+
+            #important li {
+                font-size: 17.5px;
+            }
+
+            #aboutimg {
+                width: 100%;
+            }
+
+            /* content */
+            .cardes {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 100%;
+            }
+
+            .cardes:hover {
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .contents {
+                margin-top: 25px;
+                height: 253px;
+            }
+
+
+         
+        
+
+
+            .col-md-4 {
+                margin-top: 10px;
+                margin-bottom: 50px;
+            }
+
+            /* footer */
+        </style>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+            @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+            ul,
+            li {
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                list-style-type: none;
+            }
+
+            footer {
+                background-color: #0c1a1e;
+                min-height: 350px;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .footer-col {
+                margin-top: 50px;
+            }
+
+            .logofooter {
+                margin-bottom: 10px;
+                font-size: 25px;
+                color: #fff;
+                font-weight: 700;
+            }
+
+            .footer-col p {
+                color: #fff;
+                font-size: 12px;
+                font-family: 'Open Sans', sans-serif;
+                margin-bottom: 15px;
+            }
+
+            .footer-col p i {
+                width: 20px;
+                color: #999;
+            }
+
+            .footer-ul {
+                list-style-type: none;
+                padding-left: 0;
+                margin-left: 2px;
+            }
+
+            .footer-ul li {
+                line-height: 29px;
+                font-size: 12px;
+            }
+
+            .footer-ul li a {
+                color: #a0a3a4;
+                transition: color 0.2s linear 0s, background 0.2s linear 0s;
+            }
+
+            .footer-ul i {
+                margin-right: 10px;
+            }
+
+            .footer-ul li a:hover {
+                transition: color 0.2s linear 0s, background 0.2s linear 0s;
+                color: #ff670f;
+            }
+
+            .copyright {
+                min-height: 40px;
+                background-color: #000000;
+            }
+
+            .copyright p {
+                text-align: left;
+                color: #FFF;
+                padding: 10px 0;
+                margin-bottom: 0;
+            }
+
+            .heading7 {
+                font-size: 21px;
+                font-weight: 700;
+                color: #d9d6d6;
+                margin-bottom: 22px;
+            }
+
+            .post p {
+                font-size: 12px;
+                color: #FFF;
+                line-height: 20px;
+            }
+
+            .post p span {
+                display: block;
+                color: #8f8f8f;
+            }
+
+            .bottom_ul {
+                list-style-type: none;
+                float: right;
+                margin-bottom: 0;
+            }
+
+            .bottom_ul li {
+                float: left;
+                line-height: 40px;
+            }
+
+            .bottom_ul li:after {
+                content: "/";
+                color: #FFF;
+                margin-right: 8px;
+                margin-left: 8px;
+            }
+
+            .bottom_ul li a {
+                color: #FFF;
+                font-size: 12px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 15px;
+                background-color: blue;
+                color: #fff;
+                text-align: center;
+                margin-right: 10px;
+                padding-top: 7px;
+                border-radius: 50%;
+            }
+
+            .footer-social li {
+                float: left;
+            }
+
+            .linked-in {
+                background-color: #007bb6;
+            }
+
+            .facebook {
+                background-color: #3b5998;
+            }
+
+            .twitter {
+                background-color: #1da1f2;
+            }
+
+            .google {
+                background-color: #f63e28;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <center> <span class="head"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Welcome to the BIIT
+                        Classes....</span></center>
+            </div>
+            <div class="col-sm-3">
+                <center> <span class="head"><i class="fa-solid fa-clock"></i>&nbsp;Mon-Thurs:7am-4pm,Sat-Sun;7am-4pm</span></center>
+            </div>
+            <div class="col-sm-6">
+                <center> <span class="heads"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91-7290803744, 8700652427
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#"><button class="button"><i class="fa-brands fa-facebook-f"></i></button></a> &nbsp;
+                        <a href="#"><button class="button"><i class="fa-brands fa-twitter"></i></button></a>&nbsp;&nbsp;
+                        <a href="#"><button class="button"><i
+                                    class="fa-brands fa-google-plus-g"></i></button></a>&nbsp;&nbsp;
+                        <a href="#"><button class="button"><i class="fa-brands fa-linkedin-in"></i></button></a>
+                    </span></center>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm  navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.308)">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-size:22px ; color: #1da1f2;"><img
+                    src="Letter-B-logo-design-template-on-transparent-background-PNG.png" width="40px"
+                    style="margin-right:-5px ;"><b>iit Classes</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:15px ; color: white;" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:15px ; color: white;" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:15px ; color: white;" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:15px ; color: white;" href="gallary.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:15px ; color: white;" href="ourcourse.html">Our Courses</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="headimg" class="col-md-12">
+                <h1 id="title">OUR COURSES</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="container" style="margin-top:33px;">
+        <div class="row">
+            <div id="col" class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses3.png" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b> BCA/MCA</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;"> BIIT Classes is the best
+                            institute for IGNOU BCA/MCA. We provide best classroom coaching for all subjects and
+                            practicals. We provide best faculty, study materials, test series and provide problem
+                            resolution classes to our students. We are professional teachers dedicated to help students
+                            in the best possible way.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses2.png" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b>BCA/MCA PROJECT</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;"> We provide VB.Net, ASP.Net,
+                            PHP, JAVA, C# Programming projects for IGNOU BCA, MCA students. We provide the best complete
+                            project and mini project with form design, source code, project report with all diagrams,
+                            database structure of project with experienced guidence.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses1.jpg" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b>PROFESSIONAL COURSES</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;"> BIIT classes is providing great
+                            opportunities in the growing field to the students. We provide the best professional
+                            training options for the learners. we provide professional courses like C, C++, HTML, CSS,
+                            Java script, Core & Advance Java, .NET, SQL server, PHP, Wordpress etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="col" class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses6.jpg" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b>B.TECH(CS)</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;">We also provide BTech(CS) tution
+                            in Uttam Nagar for computer science students. We cover all B.Tech/CS Subjects of IPU, MDU,
+                            DTU, SRM and other universities etc and we also provide weekend & weekdays lecture for you
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses5.jpg" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b>BASIC COMPUTER</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;"> If you are looking for basic
+                            computer skills or to upgrade computer skills you already have, Joined BIIT classes and
+                            improve your skills. We also provide tution for Basic course like: Mircosoft office, Advance
+                            excel, Photoshop, Corel draw, Tally, etc. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="cardes">
+                    <img class="img" src="biitclasses4.jpg" style="width:100%">
+                    <div class="contents">
+                        <h4 style="text-align: center ; font-size: 18px;"><b>11TH,12TH IP,CS,WEBTECH</b></h4>
+                        <p style="padding:10px ; font-size: 13px; text-align: justify;">BIIT Classes are indulged in
+                            offering Coaching & Tuitions services to our clients. We provide coaching for 10th, 12th IP,
+                            CS, WEBTECH students. we offer these services at reasonable prices, keeping in the budgetary
+                            constraints.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h6 class="heading7"> INFORMATION</h6>
+
+                    <p><i class="fa fa-map-pin"></i> RZ 11/12 Extn.Opp Hanuman Mandir, Pali factory road, Indra Park,
+                        Uttam Nagar,
+                        Delhi-110059</p>
+                    <p><i class="fa fa-phone"></i> Phone (India) : +91-7290803744, 8700652427</p>
+                    <p><i class="fa fa-envelope"></i> E-mail : biitclasses@gmail.com</p>
+
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h6 class="heading7">IGNOU IMPORTANT LINKS</h6>
+                    <ul class="footer-ul">
+                        <li><a href="http://www.ignou.ac.in/ignou/studentzone/results/1"> RESULTS</a></li>
+                        <li><a href="https://webservices.ignou.ac.in/assignments/">ASSIGNMENT</a></li>
+                        <li><a href="https://gradecard.ignou.ac.in/gradecardM/Result.asp"> GRADE CARD</a></li>
+                        <li><a href="https://exam.ignou.ac.in/"> TERM END EXAM</a></li>
+                        <li><a href="https://webservices.ignou.ac.in/Pre-Question/"> QUESTION PAPER</a></li>
+                        <li><a href="https://onlineadmission.ignou.ac.in/onlinerr/"> RE-REGISTRATION</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h6 class="heading7">OUR COURSES</h6>
+                    <div class="post">
+                        <p>IGNOU BCA / MCA</p>
+                        <p>PHP , WORDPRESS</p>
+                        <p>HTML , JAVASCRIPT</p>
+                        <p>ASP.NET , SQL SERVER</p>
+                        <p>CORE & ADVANCE JAVA</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h6 class="heading7">Social Media</h6>
+                    <ul class="footer-social">
+                        <li><a href="https://www.linkedin.com/in/biit-classes-235b59156/"><i
+                                    class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/BIITClasses/"><i
+                                    class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/biit_classes"><i class="fa fa-twitter social-icon twitter"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a
+                                href="https://accounts.google.com/ServiceLogin/signinchooser?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2F107306428085703933199&followup=https%3A%2F%2Fplus.google.com%2F107306428085703933199&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                    class="fa fa-google-plus social-icon google" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--footer start from here-->
+
+    <div class="copyright">
+        <div class="container">
+
+            <center>
+                <p>© 2022 - All Rights with Rohitdeveloper</p>
+            </center>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+</html>

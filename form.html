@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissionform</title>
+</head>
+<style>
+    body {
+        background: url("5559852.jpg");
+
+    }
+
+    input {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        background-color: #eee;
+        background: transparent;
+        color: white;
+        width: 290px;
+    }
+
+    .no-outline:focus {
+        outline: none;
+    }
+
+    textarea {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        background: transparent;
+        width: 290px;
+        height: 50px;
+        color: white;
+    }
+
+    a {
+        color: black;
+
+    }
+
+    form {
+        background: rgba(0, 0, 0, 8);
+        color: white;
+        max-width: 300px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    #head {
+        font-size: 40px;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    #alertbox {
+        font-size: 20px;
+        height: 102px;
+        width: 302px;
+        background-color: #0072ff;
+        position: absolute;
+        border-radius: 20px;
+        line-height: 20px;
+        padding: 5px;
+   
+        display: none;
+
+
+    }
+
+    #button {
+        margin-bottom: 30px;
+        background-color: blue;
+        border: blue;
+        height: 30px;
+        width: 35px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <center>
+        <h1 id="head"><b><i>BIIT CLASSES</i></b></h1>
+    </center>
+
+    <center>
+        <div>
+            <form style="margin: 50px 0px 0px 20px;">
+                <h3>&nbsp;&nbsp;&nbsp;Admission Form</h3>
+                <div class="form"><input type="text" class="no-outline" placeholder="Enter name"><br><br>
+                    <div id="alertbox">
+                        <p>Your Form is Submitted Successfully</p>
+                        <button id="button">OK</button>
+                    </div>
+                    <input type="text" class="no-outline" placeholder="Enter Father's Name"><br><br>
+                    <input maxlength="10" type="number"  class="no-outline" placeholder="Enter mobile no"><br><br>
+                    <input type="email" class="no-outline" placeholder="Enter email"><br><br>
+
+                    <textarea placeholder="Enter address"></textarea><br>
+                    <h4>Select Course</h4>
+                    <select name="gender" id="gender">
+                        <option value="none">none</option>
+                        <option value="BCA">BCA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="B.TECH">B.TECH</option>
+                        <option value="FULL STACK DEVELOPER">FULL STACK DEVELOPER</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="JAVA">JAVA</option>
+                        <option value="PYTHON">PYTHON</option>
+                        <option value=".NET">.NET</option>
+                        <option value="BASIC COMPUTER">BASIC COMPUTER</option>
+
+                    </select><br><br>
+
+                    <div
+                        style="width: 300px; height: 30px; background-color: rgb(19, 36, 189); color: white; border-radius: 5px; line-height: 30px; cursor: pointer;"
+                        onclick="alertbox()">Submit</div>
+                </div>
+            </form>
+
+        </div>
+    </center>
+
+</body>
+<script>
+    function alertbox() {
+        document.getElementById('alertbox').style.display = 'block';
+    };
+    
+</script>
+
+</html>
